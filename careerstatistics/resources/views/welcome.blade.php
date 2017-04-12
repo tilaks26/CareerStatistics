@@ -83,6 +83,8 @@
                     Career Statistics
                 </div>
 
+                    <p style="color:black; text-align:center; font-weight:bold;">This is a website which will provide the job statistics of the Computer Science graduates (prospective, current, alumni) at the School of Informatics and Computing in Indiana University - Bloomington</p>
+
                 <div class="links">
                     <a href="{{URL::to('contact')}}">Contact Us</a>
                 </div>
