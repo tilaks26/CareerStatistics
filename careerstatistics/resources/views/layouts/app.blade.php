@@ -44,9 +44,10 @@
                             <li><a href="{{URL::to('view')}}">View Statistics</a></li>
                             <li><a href="{{URL::to('job')}}">Register Job</a></li>
                             <li><a href="{{URL::to('external')}}">External Resources</a></li>
-                            <li><a href="{{URL::to('contact')}}">Contact Us</a></li>
                             @if (Auth::user()->role == 'Admin')
                                 <li><a href="{{URL::to('admin')}}">Admin</a></li>
+                            @else
+                                <li><a href="{{URL::to('contact')}}">Contact Us</a></li>
                             @endif
                         </ul>
                     @endif
@@ -63,6 +64,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
+                            <li><a href="{{ route('admin.login') }}">Admin Login</a></li>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
