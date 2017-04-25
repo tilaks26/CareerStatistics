@@ -63,6 +63,18 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+                $( "#accordion" ).accordion();
+            } );
+        </script>
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -83,8 +95,20 @@
                     Career Statistics
                 </div>
 
-                    <p style="color:black; text-align:center; font-weight:bold;">This is a website which will provide the job statistics of the Computer Science graduates (prospective, current, alumni) at the School of Informatics and Computing in Indiana University - Bloomington</p>
-
+                <div id="accordion" style="width:864px;text-align: center;">
+                    <h3>About</h3>
+                    <div>
+                        <p>This is a website which will provide the job statistics of the Computer Science graduates (prospective, current, alumni) at the School of Informatics and Computing in Indiana University - Bloomington</p>
+                    </div>
+                    <h3>Developed by</h3>
+                    <div>
+                        <p>Sneha Tilak - tilaks@iu.edu</p>
+                        <p>Akshay Reddy - reddyak@iu.edu</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
                 <div class="links">
                     <a href="{{URL::to('contact')}}">Contact Us</a>
                 </div>

@@ -12,8 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
 
     <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
     <script>
         window.Career Statistics = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -35,19 +38,20 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/home') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Career Statistics') }}
                     </a>
 
                     @if(Auth::user())
                         <ul class="nav navbar-nav">
-                            <li><a href="{{URL::to('view')}}">View Statistics</a></li>
-                            <li><a href="{{URL::to('job')}}">Register Job</a></li>
-                            <li><a href="{{URL::to('external')}}">External Resources</a></li>
-                            @if (Auth::user()->role == 'Admin')
-                                <li><a href="{{URL::to('admin')}}">Admin</a></li>
+                            @if (Auth::user()->role == 'admin')
+                                <li><a href="{{ route('admin.resource') }}">Manage Resources</a></li>
+                                <li><a href="{{ route('admin.company') }}">Manage Users</a></li>
                             @else
-                                <li><a href="{{URL::to('contact')}}">Contact Us</a></li>
+                                <li><a href="{{ URL::to('view') }}">View Statistics</a></li>
+                                <li><a href="{{ URL::to('job') }}">Register Job</a></li>
+                                <li><a href="{{ URL::to('external') }}">External Resources</a></li>
+                                <li><a href="{{ URL::to('contact') }}">Contact Us</a></li>
                             @endif
                         </ul>
                     @endif
@@ -99,4 +103,5 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
+@yield('page-js-script')
 </html>
