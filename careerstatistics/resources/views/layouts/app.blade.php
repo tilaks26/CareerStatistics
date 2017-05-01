@@ -38,9 +38,21 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Career Statistics') }}
-                    </a>
+                    @if(Auth::user())
+                        @if (Auth::user()->role == 'admin')
+                            <a class="navbar-brand" href="{{ url('/admin') }}">
+                                {{ config('app.name', 'Career Statistics') }}
+                            </a>
+                        @else
+                            <a class="navbar-brand" href="{{ url('/') }}">
+                                {{ config('app.name', 'Career Statistics') }}
+                            </a>
+                        @endif
+                    @else
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                                {{ config('app.name', 'Career Statistics') }}
+                        </a>
+                    @endif
 
                     @if(Auth::user())
                         <ul class="nav navbar-nav">
@@ -68,7 +80,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('admin.login') }}">Admin Login</a></li>
+                            <!-- <li><a href="{{ route('admin.login') }}">Admin Login</a></li> -->
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
