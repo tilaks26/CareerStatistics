@@ -81,6 +81,10 @@
                                 </button>
                             </div>
                         </div>
+                        <hr>
+                        <p align="center">Already have an account? 
+                            <a href="{{URL::to('login')}}">Sign In</a>
+                        </p>
                     </form>
                 </div>
             </div>

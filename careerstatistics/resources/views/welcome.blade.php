@@ -24,7 +24,6 @@
 
     <!-- JQuery UI CSS -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
 
     <!-- Theme CSS -->
     <!-- <link href="css/creative.min.css" rel="stylesheet"> -->
@@ -91,7 +90,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Your Only Source for Career Statistics!</h1>
+                <h1 id="homeHeading">Your Source for IU's Career Statistics!</h1>
             </div>
         </div>
     </header>
@@ -100,28 +99,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
-                    <hr class="light">
-                    <p class="text-faded">Your go-to page for career related information!</p>
+                    <div id="accordion">
+                        <h2 class="section-heading">We've got what you need!</h2>
+                        <div>
+                            <p>This is a website which will provide the job statistics of the Computer Science graduates (prospective, current, alumni) at the School of Informatics and Computing of Indiana University - Bloomington</p>
+                        </div>
+                        <h2 class="section-heading">Course Details</h2>
+                        <div>
+                            <p>Project for ILS-Z 532: Information Architecture for the Web</p>
+                        </div>
+                    </div>
+                    <hr class="primary">
                     <a href="{{ url('/register') }}" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-grey" id="acc">
-        <div class="container">
-            <div class="row">
-                <div id="accordion" style="width:864px;text-align: center;">
-                    <h3>About</h3>
-                    <div>
-                        <p>This is a website which will provide the job statistics of the Computer Science graduates (prospective, current, alumni) at the School of Informatics and Computing in Indiana University - Bloomington</p>
-                    </div>
-                    <h3>Developed by</h3>
-                    <div>
-                        <p>Sneha Tilak - tilaks@iu.edu</p>
-                        <p>Akshay Reddy - reddyak@iu.edu</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -140,14 +129,14 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-pie-chart text-primary sr-icons"></i>
                         <h3>View Statistics</h3>
                         <p class="text-muted">Confused about where to apply or just need some advice? You can view the career statistics of a particular batch by providing just the Graduation Month and Year!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-pencil-square-o text-primary sr-icons"></i>
                         <h3>Register Job</h3>
                         <p class="text-muted">Got a cool job? Share it with other users so that they can benefit from it too!</p>
                     </div>

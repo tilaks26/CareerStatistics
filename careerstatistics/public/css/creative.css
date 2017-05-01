@@ -160,7 +160,7 @@ header {
   background-position: center;
   background-image: url('../img/header.jpg');
   text-align: center;
-  color: white;
+  color: White;
 }
 header .header-content {
   position: relative;
@@ -416,5 +416,29 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
+}
+
+.ui-accordion .ui-accordion-header {
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 2px 0 0 0;
+    padding: .5em .5em .5em .7em;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: 1px solid #000000;
+  background: #000000;
+  font-weight: normal;
+  color: #808080;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 3px;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 3px;
 }
 
