@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Post;
 use Mail;
+use Log;
 
 class ContactController extends Controller
 {
@@ -44,6 +45,8 @@ class ContactController extends Controller
             $message->subject($data['subject']);
         });
 
-        return view('welcome');
+        $error = 0;
+
+        return view('contact');
     }
 }

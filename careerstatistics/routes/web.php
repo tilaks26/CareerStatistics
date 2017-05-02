@@ -43,7 +43,7 @@ Route::get('/external', 'ResourceController@show')->name('external.show')->middl
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::post('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@index')->name('contact.form');
 
 // Password Reset Routes
 Route::get('/auth/password/reset/{token?}', 'Auth\ResetPasswordController@showResetForm');
